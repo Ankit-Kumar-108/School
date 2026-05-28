@@ -18,8 +18,8 @@ import VisitorGate from "./Component/VisitorGate";
 import SearchResults from "./Pages/SearchResults";
 import PrincipalTeachers from "./Component/PrincipalTeahers";
 import Feedback from "./Component/Feedback";
-import Achievements from "./pages/Achievements";
-import Certificates from "./pages/Certificates";
+import Achievements from "./Pages/Achievements";
+import Certificates from "./Pages/Certificates";
 import Gallery from "./Pages/Gallery2";
 import Admission from "./Pages/Admission";
 
