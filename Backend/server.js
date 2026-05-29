@@ -31,8 +31,12 @@ app.use(cors({
         if (origin.startsWith("http://localhost:") || origin.startsWith("http://127.0.0.1:")) {
             return callback(null, true);
         }
-        // Allow the production Vercel deployment
-        if (origin === "https://school-s6ur.vercel.app") {
+        // Allow the production Vercel deployments
+        if (origin === "https://school-s6ur.vercel.app" || origin === "https://school-m7jz.vercel.app") {
+            return callback(null, true);
+        }
+        // Allow Vercel preview deployment URLs (e.g. school-abc123-user.vercel.app)
+        if (origin.match(/^https:\/\/school-[\w-]+\.vercel\.app$/)) {
             return callback(null, true);
         }
         return callback(new Error("Not allowed by CORS"));
