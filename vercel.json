@@ -1,5 +1,6 @@
 {
     "version": 2,
     "public": false,
-    "cleanUrls": true
+    "cleanUrls": true,
+    "installCommand": "npm install --legacy-peer-deps"
 }

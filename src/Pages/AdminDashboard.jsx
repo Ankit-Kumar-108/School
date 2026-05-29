@@ -632,7 +632,7 @@ const currentStudent = students.find(
 
       <button
         onClick={() => {
-          fetch("http://localhost:3000/api/notices", {
+          fetch("https://school-m7jz.vercel.app/api/notices", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -736,7 +736,7 @@ const currentStudent = students.find(
               <div className="flex items-center gap-5">
 
                 <img
-                  src={`http://localhost:3000/upload/${student.photo}`}
+                  src={`https://school-m7jz.vercel.app/upload/${student.photo}`}
                   alt={student.name}
                   className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
                 />
@@ -847,7 +847,7 @@ const currentStudent = students.find(
               onClick={async () => {
 
                 await fetch(
-                  `http://localhost:3000/api/feedback/${f._id}`,
+                  `https://school-m7jz.vercel.app/api/feedback/${f._id}`,
                   {
                     method: "DELETE",
                   }
