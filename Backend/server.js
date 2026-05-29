@@ -21,28 +21,7 @@ const authRoutes = require("./routes/auth");
 
 const app = express();
 
-// app.use(cors());
-// ✅ CORS - allow Vercel deployment + any localhost port for development
-app.use(cors({
-    origin: function(origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl)
-        if (!origin) return callback(null, true);
-        // Allow any localhost/127.0.0.1 origin (dev)
-        if (origin.startsWith("http://localhost:") || origin.startsWith("http://127.0.0.1:")) {
-            return callback(null, true);
-        }
-        // Allow the production Vercel deployments
-        if (origin === "https://school-s6ur.vercel.app" || origin === "https://school-m7jz.vercel.app") {
-            return callback(null, true);
-        }
-        // Allow Vercel preview deployment URLs (e.g. school-abc123-user.vercel.app)
-        if (origin.match(/^https:\/\/school-[\w-]+\.vercel\.app$/)) {
-            return callback(null, true);
-        }
-        return callback(new Error("Not allowed by CORS"));
-    },
-    credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 app.use("/api/feedback", feedbackRoutes);
