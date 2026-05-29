@@ -4,8 +4,8 @@
     "buildCommand": "npx parcel build src/index.html",
     "outputDirectory": "dist",
     "routes": [
-        { "src": "/api/(.*)", "dest": "/Backend/server.js" },
-        { "src": "/upload/(.*)", "dest": "/Backend/server.js" },
+        { "src": "/api/(.*)", "dest": "/api/server.js" },
+        { "src": "/upload/(.*)", "dest": "/api/server.js" },
         { "handle": "filesystem" },
         { "src": "/(.*)", "dest": "/index.html" }
     ]
